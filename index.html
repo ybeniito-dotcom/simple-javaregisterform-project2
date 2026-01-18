@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-purple-100 flex items-center justify-center h-screen">
+
+    <div class="w-full max-w-lg bg-white p-8 rounded-xl shadow-lg">
+        
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Message</h2>
+        
+        <label for="messageInput" class="block text-sm font-medium text-gray-600 mb-2">
+            Enter your text below (200 characters max)
+        </label>
+
+        <textarea 
+            id="messageInput" 
+            rows="5" 
+            maxlength="200"
+            class="w-full p-4 text-gray-700 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-blue-500 transition duration-200 resize-none"
+            placeholder="Start typing here..."></textarea>
+
+        <div class="flex justify-between items-center mt-2">
+            <span id="warningMsg" class="text-sm text-red-500 font-semibold opacity-0 transition-opacity duration-300">
+                Maximum limit reached!
+            </span>
+
+            <span id="charCount" class="text-sm text-gray-500 font-medium">
+                0/200 characters
+            </span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
